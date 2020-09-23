@@ -5,6 +5,9 @@ const present = require("./wait").present,
 
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
+const dblClick = require("./events-doubleclick").dblClick
+const taginput = require("./tag-input");
+const { WebDriver, browser } = require("protractor");
 chai.use(chaiAsPromised);
 const assert = chai.assert;
 
@@ -38,3 +41,13 @@ exports.buttonClick = function (el) {
 exports.elementByTextClick = function (el, content) {
     return scroll.toElement(present(element(by.linkText(content)))).click();
 };
+
+function getVisibleTypeAheadOptions() {
+    return taginput.getVisibleTypeAheadOptions();
+}
+
+exports.fillCombo = function (el, value) {
+    dblClick(element(by.css(el)));
+    return getVisibleTypeAheadOptions().element(by.linkText(value)).click();
+};
+

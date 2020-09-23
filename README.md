@@ -12,10 +12,10 @@ Em seguida, no mesmo terminal, para iniciar o teste, basta executar o comando:
 
 ```bash
 # with npm
-npm run desafio-web
+npm run cadastro-jsm
 ```
 
-Ao termino da execução, será possível encontrar o relatório na raiz do projeto, acessando o caminho ".tmp/desafio/report/index.html"
+Ao termino da execução, será possível encontrar o relatório na raiz do projeto, acessando o caminho ".tmp/novo-cadastro/report/index.html"
 
 ## Estrutura
 

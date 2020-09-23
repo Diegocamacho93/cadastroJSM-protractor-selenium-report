@@ -1,5 +1,5 @@
 {
-  "name": "zup",
+  "name": "cadastro-jsm",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,19 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cuke": ".\\node_modules\\.bin\\cucumber-js --format=json:cucumber_report.json && node index.js",
     "protractorcuke": "protractor protractor.conf.js",
-    "desafio-web": "npm run protractorcuke"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leandrobrotas/zup.git"
+    "cadastro-jsm": "npm run protractorcuke"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/leandrobrotas/zup/issues"
-  },
-  "homepage": "https://github.com/leandrobrotas/zup#readme",
   "dependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",

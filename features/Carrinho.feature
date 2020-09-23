@@ -1,8 +1,10 @@
 #language:pt
 
-Funcionalidade: Carrinho de compras
+Funcionalidade: Novo Cadastro
+    Eu como usuário
+    Quero efetuar me cadastrar
+    Para acessar o site da JS+
 
-Cenário: Inclusão de produto no carrinho de compras com sucesso
-Dado que seja feita uma pesquisa pelo produto "Cama Infantil 217x93cm Móveis Estrela"
-Quando adiciono o produto ao carrinho
-Então é possível ver que o produto "Cama Infantil 217x93cm Móveis Estrela" está presente no carrinho
+  Cenário: Cadastro de um Proprietário
+    Dado que eu inicie o processo de novo cadastro
+    E me cadastre com um perfil Proprietário

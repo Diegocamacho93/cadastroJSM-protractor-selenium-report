@@ -33,7 +33,7 @@ exports.config = {
       displayDuration: true,
       saveCollectedJSON: true,
       pageFooter: "<div><p>  </p></div>",
-      pageTitle: 'Desafio Zup',
+      pageTitle: 'Novo Cadastro - Juntos Somos Mais',
       reportName: 'Relatório de execução de teste automção Web',
     }
   }],
@@ -45,7 +45,7 @@ exports.config = {
     ignoreUncaughtExceptions: true,
     strict: true,
     'dry-run': false,
-    format: 'json:.tmp/desafio/results.json',
+    format: 'json:.tmp/novo-cadastro/results.json',
     plugin: 'pretty',
     require: [
       prop.get('stepsPath'),
