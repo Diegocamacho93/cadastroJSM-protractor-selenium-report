@@ -1,4 +1,4 @@
-# cadastroJSM-protractor-selenium-reporterhtml
+# cadastroJSM-protractor-selenium-report-html
 
 ## Execução
 Para correta execução da suite de testes, é necessário realizar clonar o projeto em um diretório de sua preferencia e em seguida, através do terminal da máquina executar os seguintes comandos:
