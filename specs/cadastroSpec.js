@@ -9,10 +9,26 @@ Given('que eu inicie o processo de novo cadastro', function () {
 });
 
 Given('me cadastre com um perfil Proprietário', function () {
-    home.trabalhoEmLojas();
-    return home.preencherDadosPessoais();
-
+    return home.trabalhoEmLojas();
+    
 });
+
+When('preencho os meus dados pessoais', function () {
+    return home.preencherDadosPessoais();
+});
+
+When('preencho os dados da loja', function () {
+    return home.preencherDadosLoja();
+});
+
+Then('preencho com a minha senha', function () {
+    return home.preencherSenha();
+});
+
+Then('o cadastro é concluído com sucesso', function () {
+    return home.assertConclusaoDeCadastro();
+});
+
 
 After(function () {
     let self = this;
