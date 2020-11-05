@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  vpn:
+    image: dperson/openvpn-client
+    cap_add:
+      - net_admin
+    security_opt:
+      - label:disable
+    volumes:
+      - /dev/net:/dev/net:z
+      - ./vpn:/vpn
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+  testcafe:
+    build:
+      context: .
+    depends_on: 
+      - vpn
+    network_mode: "service:vpn"
+    environment:
+      - TZ=America/Sao_Paulo
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+    volumes:
+      - ./:/home/e2e
+      - ./reports:/home/e2e/reports
+      - /home/e2e/node_modules/
+    command:
+      [
+        "chromium:headless:emulation:width=1366;height=768",
+        "/home/e2e/tests/",
+        "--quarantine-mode",
+        "--reporter",
+        "spec,xunit:reports/report.xml",
+      ]
