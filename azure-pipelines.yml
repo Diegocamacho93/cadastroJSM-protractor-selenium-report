@@ -16,6 +16,9 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+    npm install && node node_modules/protractor/bin/webdriver-manager update
+  displayName: 'npm install and update webdriver'
+
+- script: |
+    npm run cadastro-jsm
+  displayName: 'Execute cadastro feature'
