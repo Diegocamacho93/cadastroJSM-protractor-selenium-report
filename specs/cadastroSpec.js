@@ -36,7 +36,7 @@ After(function () {
 });
 
 Before(function () {
-    return driver.get("https://juntossomosmais.com.br/").then(() => {
+    return driver.get("https://colosseum.qa.juntossomosmaisi.com.br/").then(() => {
         browser.ignoreSynchronization = true;
     });
 });
